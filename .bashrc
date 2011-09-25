@@ -106,8 +106,6 @@ export COLORFGBG="default;default"
 function today {
  echo "Today's date is:" date +"%A, %B %-d, %Y"
 }
-#setxkbmap us; xset -r 66
-#setxkbmap us -variant colemak
 source ~/.xinitrc
 
 set -o vi
