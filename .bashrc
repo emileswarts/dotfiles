@@ -107,5 +107,6 @@ function today {
  echo "Today's date is:" date +"%A, %B %-d, %Y"
 }
 source ~/.xinitrc
+source ~/.xmodmaprc
 
 set -o vi
