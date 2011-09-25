@@ -46,3 +46,4 @@ alias ..='../'
 alias ...='../../'
 alias ....='../../../'
 
+alias xx='exit'
