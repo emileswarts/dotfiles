@@ -60,6 +60,10 @@ biblue='\e[1;34m'       # Blue
 bipurple='\e[1;35m'     # Purple
 bicyan='\e[1;36m'       # Cyan
 biwhite='\e[1;37m'      # White
+D=$'\e[37;40m'
+PINK=$'\e[35;40m'
+GREEN=$'\e[32;40m'
+ORANGE=$'\e[33;40m'
 
 if [ "$color_prompt" = yes ]; then
     PS1="${debian_chroot:+($debian_chroot)}\[$bigreen\]\u\[$biyellow\]@\[$biblue\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
@@ -119,6 +123,7 @@ function today {
  echo "Today's date is:" date +"%A, %B %-d, %Y"
 }
 source ~/.xinitrc
+source ~/.bash_profile
 xmodmap ~/.Xmodmap
 
 set -o vi
