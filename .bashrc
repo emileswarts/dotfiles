@@ -51,20 +51,22 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 # Bold High Intensty
-BIBlack='\e[1;90m'      # Black
-BIRed='\e[1;91m'        # Red
-BIGreen='\e[1;92m'      # Green
-BIYellow='\e[1;93m'     # Yellow
-BIBlue='\e[1;94m'       # Blue
-BIPurple='\e[1;95m'     # Purple
-BICyan='\e[1;96m'       # Cyan
-BIWhite='\e[1;97m'      # White
+biblack='\e[1;30m'      # Black
+bired='\e[1;31m'        # Red
+#BIGreen='\e[1;92m'      # Green
+bigreen='\e[1;32m'      # Green
+biyellow='\e[1;33m'     # Yellow
+biblue='\e[1;34m'       # Blue
+bipurple='\e[1;35m'     # Purple
+bicyan='\e[1;36m'       # Cyan
+biwhite='\e[1;37m'      # White
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}\[$bigreen\]\u\[$biyellow\]@\[$biblue\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
+
 
 unset color_prompt force_color_prompt
 
