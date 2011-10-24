@@ -20,3 +20,7 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+export LANGUAGE="en_GB:en"
+export LC_MESSAGES="en_GB.UTF-8"
+export LC_CTYPE="en_GB.UTF-8"
+export LC_COLLATE="en_GB.UTF-8"
