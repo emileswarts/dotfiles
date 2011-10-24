@@ -12,10 +12,10 @@ alias sshfsmicko='sshfs emile@micko.fatbeehive.com:/server/www ~/srv/micko/'
 alias sshfsnearly='sshfs korpzone_emileswarts@ssh.phx.nearlyfreespeech.net:/ ~/srv/nearly/'
 alias sshfsnearlyvim='sshfs korpzone_myvimcommands@ssh.phx.nearlyfreespeech.net:/ ~/srv/nearlyvim/'
 
-alias ubrix fusermount -z -u ~/srv/brix
-alias uhomer fusermount -z -u ~/srv/homer
-alias ufalco fusermount -z -u ~/srv/falco
-alias umicko fusermount -z -u ~/srv/micko
+alias ubrix='fusermount -z -u ~/srv/brix'
+alias uhomer='fusermount -z -u ~/srv/homer'
+alias ufalco='fusermount -z -u ~/srv/falco'
+alias umicko='fusermount -z -u ~/srv/micko'
 
 #gmail accounts
 #korpzone@gmail.com
