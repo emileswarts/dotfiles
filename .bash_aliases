@@ -6,6 +6,7 @@ alias sshnearly='ssh korpzone_emileswarts@ssh.phx.nearlyfreespeech.net'
 alias sshnearlyvim='ssh korpzone_myvimcommands@ssh.phx.nearlyfreespeech.net'
 
 alias sshfsbrix='sshfs emile@brix.fatbeehive.com:/server/www/ ~/srv/brix/'
+alias sshfshomer='sshfs emile@homer.fatbeehive.com:/server/www/ ~/srv/homer/'
 alias sshfsfalco='sshfs -p 6007 emile@falco.fatbeehive.com:/server/www ~/srv/falco/'
 alias sshfsmicko='sshfs emile@micko.fatbeehive.com:/server/www ~/srv/micko/'
 alias sshfsnearly='sshfs korpzone_emileswarts@ssh.phx.nearlyfreespeech.net:/ ~/srv/nearly/'
