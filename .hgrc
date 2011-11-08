@@ -1,5 +1,6 @@
 [extensions]
 color =
+hgext.graphlog =
 [color]
 status.modified = blue bold underline red_background
 status.added = green bold
