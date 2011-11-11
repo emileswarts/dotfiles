@@ -52,3 +52,7 @@ alias ...='../../'
 alias ....='../../../'
 
 alias xx='exit'
+
+alias oo='gnome-open ./'
+
+
