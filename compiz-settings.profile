@@ -54,10 +54,10 @@ s0_shadow_radius = 15.000000
 s0_shadow_opacity = 0.500000
 s0_shadow_color = #00000000
 s0_shadow_x_offset = 1
-s0_shadow_y_offset = 5
+s0_shadow_y_offset = -2
 s0_command = /usr/bin/compiz-decorator
 s0_mipmap = false
-s0_decoration_match = any
+s0_decoration_match =  & !(class=Gnome-terminal)
 s0_shadow_match = any
 
 [fade]
@@ -125,11 +125,11 @@ s0_rotate_to_12_window_key = Disabled
 
 [switcher]
 s0_next_button = Disabled
-s0_next_key = <Alt>Tab
+s0_next_key = <Super>n
 s0_prev_button = Disabled
 s0_prev_key = <Shift><Alt>Tab
 s0_next_all_button = Disabled
-s0_next_all_key = <Control><Alt>Tab
+s0_next_all_key = <Super>r
 s0_prev_all_button = Disabled
 s0_prev_all_key = <Shift><Control><Alt>Tab
 s0_next_no_popup_button = Disabled
@@ -206,7 +206,7 @@ s0_unredirect_fullscreen_windows = false
 s0_force_independent_output_painting = false
 
 [core]
-s0_active_plugins = core;bailer;detection;composite;opengl;compiztoolbox;decor;session;imgpng;vpswitch;gnomecompat;grid;regex;mousepoll;wall;animation;commands;workarounds;expo;ezoom;fade;
+s0_active_plugins = core;bailer;detection;composite;opengl;compiztoolbox;decor;session;imgpng;vpswitch;gnomecompat;grid;regex;mousepoll;wall;animation;commands;workarounds;ezoom;switcher;thumbnail;wobbly;fade;
 s0_audible_bell = true
 s0_ignore_hints_when_maximized = true
 s0_hide_skip_taskbar_windows = true
@@ -333,7 +333,7 @@ s0_slide_in_duration = 250
 s0_slide_out_duration = 250
 
 [vpswitch]
-s0_begin_key = Disabled
+s0_begin_key = <Super>s
 s0_switch_to_1_key = Disabled
 s0_switch_to_2_key = Disabled
 s0_switch_to_3_key = Disabled
@@ -408,15 +408,15 @@ s0_run_command_terminal_key = <Mod4>t
 s0_put_center_key = <Control><Alt>KP_4
 s0_put_left_key = <Control><Super>h
 s0_put_right_key = <Control><Super>l
-s0_put_top_key = <Control><Alt>KP_8
-s0_put_bottom_key = <Control><Alt>KP_2
+s0_put_top_key = <Control><Super>k
+s0_put_bottom_key = <Control><Super>j
 s0_put_topleft_key = <Control><Alt>KP_7
 s0_put_topright_key = <Control><Alt>KP_9
 s0_put_bottomleft_key = <Control><Alt>KP_1
 s0_put_bottomright_key = <Control><Alt>KP_3
 s0_put_maximize_key = <Control><Alt>KP_0
 s0_put_restore_key = <Control><Alt>r
-s0_top_left_corner_action = 4
+s0_top_left_corner_action = 7
 s0_top_edge_action = 10
 s0_top_right_corner_action = 6
 s0_left_edge_action = 4
@@ -988,14 +988,14 @@ s0_put_viewport_10_key = Disabled
 s0_put_viewport_11_key = Disabled
 s0_put_viewport_12_key = Disabled
 s0_put_viewport_left_key = Disabled
-s0_put_viewport_right_key = Disabled
+s0_put_viewport_right_key = <Super>space
 s0_put_viewport_up_key = Disabled
 s0_put_viewport_down_key = Disabled
 s0_put_center_key = <Super>KP_Begin
 s0_put_center_button = Disabled
 s0_put_left_key = <Super>KP_Left
 s0_put_left_button = Disabled
-s0_put_right_key = <Super>KP_Right
+s0_put_right_key = <Super>o
 s0_put_right_button = Disabled
 s0_put_top_key = <Super>KP_Up
 s0_put_top_button = Disabled
@@ -1031,14 +1031,14 @@ s0_put_restore_key = <Super>KP_Insert
 s0_put_restore_button = Disabled
 s0_put_pointer_key = <Super>z
 s0_put_pointer_button = Disabled
-s0_put_next_output_key = Disabled
+s0_put_next_output_key = <Super>space
 s0_put_next_output_button = Disabled
 s0_pad_left = 0
 s0_pad_right = 0
 s0_pad_top = 0
 s0_pad_bottom = 0
 s0_unfocus_window = false
-s0_window_center = false
+s0_window_center = true
 s0_avoid_offscreen = false
 s0_speed = 2.500000
 s0_timestep = 0.500000
