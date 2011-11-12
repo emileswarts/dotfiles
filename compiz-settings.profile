@@ -193,7 +193,7 @@ s0_title_text_placement = 0
 [move]
 s0_initiate_button = <Alt>Button1
 s0_initiate_key = <Alt>F7
-s0_opacity = 100
+s0_opacity = 90
 s0_constrain_y = true
 s0_snapoff_maximized = true
 s0_lazy_positioning = true
@@ -206,7 +206,7 @@ s0_unredirect_fullscreen_windows = false
 s0_force_independent_output_painting = false
 
 [core]
-s0_active_plugins = core;bailer;detection;composite;opengl;compiztoolbox;decor;session;imgpng;vpswitch;gnomecompat;grid;regex;mousepoll;wall;animation;commands;workarounds;ezoom;switcher;thumbnail;wobbly;fade;
+s0_active_plugins = core;bailer;detection;composite;opengl;compiztoolbox;decor;imgpng;place;vpswitch;gnomecompat;grid;regex;mousepoll;wall;animation;commands;workarounds;ezoom;put;switcher;session;thumbnail;wobbly;fade;
 s0_audible_bell = true
 s0_ignore_hints_when_maximized = true
 s0_hide_skip_taskbar_windows = true
@@ -311,8 +311,8 @@ s0_stroke_width = 3.000000
 
 [place]
 s0_workarounds = true
-s0_mode = 2
-s0_multioutput_mode = 0
+s0_mode = 3
+s0_multioutput_mode = 3
 s0_force_placement_match = 
 s0_position_matches = 
 s0_position_x_values = 
@@ -427,7 +427,7 @@ s0_bottom_right_corner_action = 6
 s0_snapoff_maximized = true
 s0_snapback_windows = true
 s0_left_edge_threshold = 0
-s0_right_edge_threshold = 10
+s0_right_edge_threshold = 500
 s0_top_edge_threshold = 0
 s0_bottom_edge_threshold = 10
 s0_draw_indicator = true
@@ -975,8 +975,8 @@ s0_sync_to_vblank = true
 s0_texture_compression = false
 
 [put]
-s0_put_viewport_1_key = Disabled
-s0_put_viewport_2_key = Disabled
+s0_put_viewport_1_key = <Super>1
+s0_put_viewport_2_key = <Super>2
 s0_put_viewport_3_key = Disabled
 s0_put_viewport_4_key = Disabled
 s0_put_viewport_5_key = Disabled
