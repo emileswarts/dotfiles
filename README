@@ -7,3 +7,12 @@ For each file in the directory create a symlink, with the name of the file:
     ln -s ~/dotfiles/.filename ~/.filename
 
 
+gnome-terminal-conf.xml is my gnome terminal config
+
+No need to symlink this file.
+
+To use this file, type the following:
+	gconftool-2 --load gnome-terminal-conf.xml
+
+Then, to load it
+	gconftool-2 -R '/apps/gnome-terminal'
