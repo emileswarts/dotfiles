@@ -127,3 +127,10 @@ source ~/.bash_profile
 xmodmap ~/.Xmodmap
 
 set -o vi
+
+function path(){
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PATH
+    IFS=$old
+}
