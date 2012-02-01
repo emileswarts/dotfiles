@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-. $HOME/scripts/z.sh
-
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -124,6 +122,5 @@ function today {
 }
 source ~/.xinitrc
 source ~/.bash_profile
-xmodmap ~/.Xmodmap
 
 set -o vi
