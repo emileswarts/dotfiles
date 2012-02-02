@@ -124,3 +124,10 @@ source ~/.xinitrc
 source ~/.bash_profile
 
 set -o vi
+
+function path(){
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PATH
+    IFS=$old
+}
