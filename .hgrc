@@ -9,6 +9,7 @@ status.deleted = cyan bold underline
 status.unknown = magenta bold underline
 status.ignored = black bold
 [ui]
+merge = vimdiff
 username = Emile Swarts <emile@fatbeehive.com>
 editor = vim
 verbose = true
@@ -19,4 +20,6 @@ status.removed = red bold
 status.deleted = cyan bold
 status.unknown = blue bold
 status.ignored = black bold
-
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other +close +close
