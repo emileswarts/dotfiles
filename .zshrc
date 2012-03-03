@@ -34,7 +34,7 @@ plugins=(mercurial nyan vi-mode)
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
-
+unsetopt correct_all
 
 # cypher
 # darkblood
