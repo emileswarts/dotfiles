@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -r ~/dotfiles
+rm -fr ~/dotfiles
 
 git clone git@github.com:emileswarts/dotfiles.git dotfiles
 
