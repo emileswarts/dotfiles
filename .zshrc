@@ -24,6 +24,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 alias tmux="tmux -2"
 export EDITOR=vim
+export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
 #
 # history
