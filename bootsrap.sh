@@ -1,6 +1,6 @@
 #!/bin/bash
 cd
-if [ -d "$HOME/dotfiles"]; then
+if [ -d "$HOME/dotfiles" ]; then
 	rm -fr $HOME/dotfiles
 fi
 git clone git@github.com:emileswarts/dotfiles.git "$HOME/dotfiles"
