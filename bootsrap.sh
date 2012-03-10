@@ -1,6 +1,8 @@
 #!/bin/bash
 cd
-rm -fr $HOME/dotfiles
+if [ -d "$HOME/dotfiles"]; then
+	rm -fr $HOME/dotfiles
+fi
 git clone git@github.com:emileswarts/dotfiles.git "$HOME/dotfiles"
 chown -R $USER dotfiles
 
