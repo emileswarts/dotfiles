@@ -35,8 +35,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 unsetopt correct_all
-
+alias tmux="tmux -2"
 # cypher
 # darkblood
 # fino !!
 # last one tested was pmcgee
+#
