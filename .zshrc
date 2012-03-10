@@ -11,33 +11,25 @@ ZSH_THEME="kp"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(mercurial nyan vi-mode)
+plugins=(command-coloring mercurial nyan vi-mode hg)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 unsetopt correct_all
 alias tmux="tmux -2"
-# cypher
-# darkblood
-# fino !!
-# last one tested was pmcgee
+export EDITOR=vim
+bindkey '^R' history-incremental-search-backward
 #
+# history
+HISTFILE=$HOME/.zsh-history
+HISTSIZE=3000
+SAVEHIST=10000 # nice for logging
+setopt extended_history
+setopt share_history
+function history-all { history -E 1 }
