@@ -22,7 +22,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 unsetopt correct_all
-alias tmux="tmux -2"
+alias tmux="tmux -2 -u"
 export EDITOR=vim
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
