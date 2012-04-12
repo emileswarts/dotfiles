@@ -1,5 +1,6 @@
 # transparency - true or false (default)
-URxvt*transparent: false
+URxvt*transparent: true
+URxvt*shading: 30
 
 # tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
 # some nice listings are at:
@@ -19,7 +20,7 @@ URxvt*foreground:#eeeeec
 #URxvt*foreground:#b98000
 
 # background color (prior to tinting) (default is white)
-URxvt*background: Black
+URxvt*background: rgba:0000/0000/0200/c800
 
 # Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
 # Fedora/debian packages: libXft/libxft2
