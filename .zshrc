@@ -16,7 +16,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(command-coloring mercurial nyan vi-mode hg)
+plugins=(command-coloring mercurial nyan vi-mode hg archlinux)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
