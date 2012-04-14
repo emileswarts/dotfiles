@@ -25,7 +25,6 @@ unsetopt correct_all
 alias tmux="tmux -2 -u"
 export EDITOR=vim
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/home/korpz/.gem/ruby/1.9.1/bin"
->>>>>>> 8f559249277dc3d306d4c6a47a7dbb998d54e9a6
 export PATH
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
