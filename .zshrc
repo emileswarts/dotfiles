@@ -22,9 +22,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 unsetopt correct_all
-alias tmux="tmux -2"
+alias tmux="tmux -2 -u"
 export EDITOR=vim
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/root/.gem/ruby/1.9.1/bin"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/home/korpz/.gem/ruby/1.9.1/bin"
 export PATH
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
