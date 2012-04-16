@@ -16,7 +16,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(command-coloring mercurial nyan vi-mode hg)
+plugins=(command-coloring mercurial nyan vi-mode hg git archlinux)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 alias tmux="tmux -2"
 export EDITOR=vim
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/root/.gem/ruby/1.9.1/bin"
 export PATH
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
