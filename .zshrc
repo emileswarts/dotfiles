@@ -37,3 +37,5 @@ setopt extended_history
 setopt share_history
 function history-all { history -E 1 }
 xmodmap $HOME/.Xmodmap
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
