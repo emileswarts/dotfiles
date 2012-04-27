@@ -2,7 +2,7 @@ settings = {
   core = {
     real_name = "Emile Swarts";
     user_name = "emile";
-    nick = "emile";
+    nick = "emileswarts";
     recode_autodetect_utf8 = "yes";
   };
   "fe-text" = { actlist_sort = "refnum"; };
