@@ -266,10 +266,11 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = ""; user_name = "korpz"; nick = "korpz"; };
+  core = { real_name = "Emile Swarts"; user_name = "emileswarts"; nick = "emileswarts"; };
   "fe-text" = { actlist_sort = "refnum"; term_force_colors = "yes"; };
   "fe-common/core" = {
     reuse_unused_windows = "yes";
     print_active_channel = "yes";
   };
 };
+hilights = ( { text = "emileswarts"; nick = "yes"; word = "yes"; } );
