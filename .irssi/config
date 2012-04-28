@@ -67,7 +67,7 @@ chatnets = {
   };
   OFTC = {
     type = "IRC";
-    autosendcmd = "/^msg nickserv emileswarts corpseirc;wait 2000";
+    autosendcmd = "/^msg nickserv emileswarts;wait 2000";
     max_kicks = "1";
     max_msgs = "3";
     max_whois = "30";
