@@ -26,3 +26,5 @@
     token = 09988b3a47a256e113017deceebeb5f1
 [merge]
 	tool = vimdiff
+[core]
+	editor = vim
