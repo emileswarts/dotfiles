@@ -1,16 +1,3 @@
-settings = {
-  core = {
-    real_name = "Emile Swarts";
-    user_name = "emile";
-    nick = "emileswarts";
-    recode_autodetect_utf8 = "yes";
-  };
-  "fe-text" = { actlist_sort = "refnum"; term_force_colors = "yes"; };
-};
-servers = (
-  {
-    address = "irc.freenode.net";
-    chatnet = "fn";
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
@@ -44,10 +31,6 @@ servers = (
     ssl_verify = "no";
     autoconnect = "yes";
   }
-);
-chatnets = { fn = { type = "IRC"; }; };
-channels = ( 
-  { name = "#archlinux"; chatnet = "fn"; autojoin = "yes"; }
 );
 
 chatnets = {
