@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 settings = {
   core = {
     real_name = "Emile Swarts";
@@ -11,6 +12,7 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "fn";
+=======
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
@@ -39,16 +41,19 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "IRCnet";
+>>>>>>> home_arch
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
   }
 );
+<<<<<<< HEAD
 chatnets = { fn = { type = "IRC"; }; };
 channels = ( 
   { name = "#archlinux"; chatnet = "fn"; autojoin = "yes"; }
 );
+=======
 
 chatnets = {
   IRCnet = {
@@ -291,3 +296,4 @@ settings = {
   };
 };
 hilights = ( { text = "emileswarts"; nick = "yes"; word = "yes"; } );
+>>>>>>> home_arch
