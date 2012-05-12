@@ -1,13 +1,19 @@
 #!/bin/bash
-cd
-if [ -d "$HOME/dotfiles" ]; then
-	rm -fr $HOME/dotfiles
-fi
-git clone git@github.com:emileswarts/dotfiles.git "$HOME/dotfiles"
-chown -R $USER dotfiles
+cd ~/dotfiles
+git pull
 
-for file in ` ls -a ~/dotfiles | grep -v '^\.\.$' |grep -v '^\.$' | grep -v '^README$' |grep -v '^compiz-settings.profile$' |grep -v '^gnome-terminal-conf.xml$' |grep -v '^bootstrap.sh$'`
-do
-    rm -f $HOME/$file
-	ln -s "$HOME/dotfiles/$file" "$HOME/$file"
-done
+function doIt() {
+rsync --exclude ".git/" --exclude "bootstrap.sh" --exclude "compiz-settings.profile" --exclude "README.md" -av . ~
+}
+
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+	doIt
+else
+	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+	echo
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+		doIt
+	fi
+fi
+
+unset doIt
