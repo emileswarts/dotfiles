@@ -1,4 +1,5 @@
 #!/bin/sh
+$HOME/bin/wallpaper &
 exec xrandr --output VGA-0 --mode 1280x720 --left-of LVDS --mode 1360x768 &
 exec ck-launch-session startxfce4
 xsetroot -cursor_name left_ptr
