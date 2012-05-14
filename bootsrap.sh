@@ -1,13 +1,7 @@
 #!/bin/bash
-cd
-if [ -d "$HOME/dotfiles" ]; then
-	rm -fr $HOME/dotfiles
-fi
-git clone git@github.com:emileswarts/dotfiles.git "$HOME/dotfiles"
-chown -R $USER dotfiles
-
-for file in ` ls -a ~/dotfiles | grep -v '^\.\.$' |grep -v '^\.$' | grep -v '^README$' |grep -v '^compiz-settings.profile$' |grep -v '^gnome-terminal-conf.xml$' |grep -v '^bootstrap.sh$'`
+#USE THIS FILE WITH CARE
+for file in ` ls -a ~/dotfiles | grep -v '^\.\.$' |grep -v '^\.$' | grep -v '^README$' |grep -v '^compiz-settings.profile$' |grep -v '^gnome-terminal-conf.xml$' |grep -v '^bootstrap.sh$'` |grep -v '^\.git'
 do
-    rm -f $HOME/$file
+    rm $HOME/$file
 	ln -s "$HOME/dotfiles/$file" "$HOME/$file"
 done

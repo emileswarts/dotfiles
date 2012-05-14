@@ -131,3 +131,5 @@ function path(){
     printf "%s\n" $PATH
     IFS=$old
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
