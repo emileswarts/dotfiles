@@ -38,4 +38,7 @@ setopt share_history
 function history-all { history -E 1 }
 xmodmap $HOME/.Xmodmap
 
+# Load RVM, if you are using it
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
