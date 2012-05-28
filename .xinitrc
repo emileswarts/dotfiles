@@ -1,6 +1,6 @@
 #!/bin/sh
 $HOME/bin/wallpaper &
-#exec ck-launch-session startxfce4
+$HOME/bin/myxorg.sh &
 xsetroot -cursor_name left_ptr
 setxkbmap us -variant colemak
 xmodmap -e 'clear lock'
