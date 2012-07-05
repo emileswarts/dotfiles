@@ -7,16 +7,12 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="kp"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(command-coloring mercurial nyan vi-mode hg git archlinux)
+plugins=(command-coloring mercurial nyan vi-mode hg git)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
@@ -24,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 alias tmux="tmux -2 -u"
 export EDITOR=vim
-PATH="/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/home/korpz/.gem/ruby/1.9.1/bin"
+PATH=".cabal/bin:/usr/local:/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/home/emileswarts/.gem/ruby/1.9.1/bin:/usr/local/mysql/bin"
 export PATH
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
@@ -36,7 +32,7 @@ SAVEHIST=10000 # nice for logging
 setopt extended_history
 setopt share_history
 function history-all { history -E 1 }
-xmodmap $HOME/.Xmodmap
+# xmodmap $HOME/.Xmodmap
 
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
