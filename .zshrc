@@ -18,9 +18,10 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 unsetopt correct_all
-alias tmux="tmux -2 -u"
+alias tmux="tmux"
+export TERM=screen-256color
 export EDITOR=vim
-PATH=".cabal/bin:/usr/local:/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/home/emileswarts/.gem/ruby/1.9.1/bin:/usr/local/mysql/bin"
+PATH=".cabal/bin:/usr/local:/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/home/emileswarts/.gem/ruby/1.9.1/bin:/usr/local/mysql/bin:/home/emileswarts/bin/"
 export PATH
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
