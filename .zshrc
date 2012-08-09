@@ -21,7 +21,21 @@ unsetopt correct_all
 alias tmux="tmux"
 export TERM=screen-256color
 export EDITOR=vim
-PATH=".cabal/bin:/usr/local:/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:/home/emileswarts/.gem/ruby/1.9.1/bin:/usr/local/mysql/bin:/home/emileswarts/bin/"
+
+PATH=".cabal/bin:"
+PATH=$PATH"/bin:"
+PATH=$PATH"/usr/local:"
+PATH=$PATH"/usr/bin:"
+PATH=$PATH"/usr/local/bin:"
+PATH=$PATH"/usr/local/sbin:"
+PATH=$PATH"/usr/sbin:"
+PATH=$PATH"/sbin:"
+PATH=$PATH"/usr/bin/core_perlkb:"
+PATH=$PATH"/opt/vagrant/bin:"
+PATH=$PATH"$HOME/.gem/ruby/1.9.1/bin:"
+PATH=$PATH"/usr/local/mysql/bin:"
+PATH=$PATH"$HOME/bin/"
+
 export PATH
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
