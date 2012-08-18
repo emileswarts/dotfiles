@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
 alias tmux="tmux"
-export TERM=screen-256color
+export TERM=xterm
 export EDITOR=vim
 
 PATH=".cabal/bin:"
@@ -28,12 +28,14 @@ PATH=$PATH"/usr/local:"
 PATH=$PATH"/usr/bin:"
 PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local/sbin:"
+PATH=$PATH"$HOME/pear/bin:"
 PATH=$PATH"/usr/sbin:"
 PATH=$PATH"/sbin:"
 PATH=$PATH"/usr/bin/core_perlkb:"
 PATH=$PATH"/opt/vagrant/bin:"
 PATH=$PATH"$HOME/.gem/ruby/1.9.1/bin:"
 PATH=$PATH"/usr/local/mysql/bin:"
+PATH=$PATH"/.rvm/scripts/rvm:"
 PATH=$PATH"$HOME/bin/"
 
 export PATH
@@ -53,3 +55,9 @@ function history-all { history -E 1 }
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+. $HOME/bin/z/z.sh
+function precmd () {
+	_z --add "$(pwd -P)"
+}
+
