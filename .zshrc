@@ -1,5 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+export OH_MY_ZSH_DEBUG="true"
+
+test -f "$HOME/src/hgd/hd" && export OH_MY_ZSH_HG="$HOME/src/hgd/hd" || export OH_MY_ZSH_HG='hg'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -18,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 unsetopt correct_all
+unsetopt promptcr
 alias tmux="tmux"
 export TERM=xterm
 export EDITOR=vim
@@ -37,8 +41,10 @@ PATH=$PATH"$HOME/.gem/ruby/1.9.1/bin:"
 PATH=$PATH"/usr/local/mysql/bin:"
 PATH=$PATH"/.rvm/scripts/rvm:"
 PATH=$PATH"$HOME/bin/"
+PATH=$PATH"/usr/local/mongodb/bin"
 
 export PATH
+
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
 #
@@ -61,3 +67,4 @@ function precmd () {
 	_z --add "$(pwd -P)"
 }
 
+export LSCOLORS="Bxfxcxdxbxegedabagacad"
