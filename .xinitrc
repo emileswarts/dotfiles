@@ -2,7 +2,8 @@
 $HOME/bin/wallpaper &
 $HOME/bin/myxorg.sh &
 xsetroot -cursor_name left_ptr
-setxkbmap us -variant colemak
+setxkbmap -option 'ctrl:nocaps'
 unclutter -root -idle 2 &  #kill inactive cursor
-startxfce4
+setxkbmap us -variant colemak
+#startxfce4
 exec xmonad
