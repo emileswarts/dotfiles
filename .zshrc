@@ -21,9 +21,6 @@ unsetopt correct_all
 alias tmux="tmux"
 export TERM=xterm
 export EDITOR=vim
-<<<<<<< HEAD
-PATH="/usr/bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perlkb:/opt/vagrant/bin:$HOME/.gem/ruby/1.9.1/bin:$HOME/bin"
-=======
 
 PATH=".cabal/bin:"
 PATH=$PATH"/bin:"
@@ -41,7 +38,6 @@ PATH=$PATH"/usr/local/mysql/bin:"
 PATH=$PATH"/.rvm/scripts/rvm:"
 PATH=$PATH"$HOME/bin/"
 
->>>>>>> 5292c2f4b9211b38debef8332691d9df2eb5e3ee
 export PATH
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
