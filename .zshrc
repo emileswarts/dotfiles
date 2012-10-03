@@ -28,9 +28,9 @@ export EDITOR=vim
 
 PATH=".cabal/bin:"
 PATH=$PATH"/bin:"
+PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local:"
 PATH=$PATH"/usr/bin:"
-PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local/sbin:"
 PATH=$PATH"$HOME/pear/bin:"
 PATH=$PATH"/usr/sbin:"
@@ -40,7 +40,6 @@ PATH=$PATH"/opt/vagrant/bin:"
 PATH=$PATH"$HOME/.gem/ruby/1.9.1/bin:"
 PATH=$PATH"/usr/local/mysql/bin:"
 PATH=$PATH"/.rvm/scripts/rvm:"
-PATH=$PATH"$HOME/bin/"
 PATH=$PATH"/usr/local/mongodb/bin"
 
 export PATH
