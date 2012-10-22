@@ -8,6 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="kp"
 
 COMPLETION_WAITING_DOTS="true"
+export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -19,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
 alias tmux="tmux"
-export TERM=xterm
+export TERM=xterm-256color
 export EDITOR=vim
 
 PATH=".cabal/bin:"
