@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 unsetopt promptcr
 alias tmux="tmux"
-export TERM=xterm
+export TERM=xterm-256color
 export EDITOR=vim
 
 PATH=".cabal/bin:"

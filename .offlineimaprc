@@ -3,6 +3,7 @@ ui = TTY.TTYUI
 accounts = EmileSwarts
 pythonfile=~/.mutt/offlineimap.py
 fsync = False
+ssl = yes
 
 [Account EmileSwarts]
 localrepository = EmileSwarts-Local
@@ -22,6 +23,7 @@ nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
 
 [Repository EmileSwarts-Remote]
 maxconnections = 1
+cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
 type = Gmail
 remoteuser = emile.swarts123@gmail.com
 remotepasseval = get_keychain_pass(account="emile.swarts123@gmail.com", server="imap.gmail.com")
