@@ -1,8 +1,2 @@
-WELCOME to my dotfiles awesomeness
-Run bootstrap.sh to create symlinks
+This is the OSX Branch
 
-cd
-git clone git@github.com:emileswarts/dotfiles.git $USER/dotfiles
-cd dotfiles
-chmod u+x bootstrap.sh
-./bootstrap.sh
