@@ -59,6 +59,9 @@ function history-all { history -E 1 }
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
+# Load RVM, if you are using it
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 . $HOME/bin/z/z.sh
