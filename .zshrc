@@ -19,11 +19,11 @@ plugins=(command-coloring mercurial nyan vi-mode hg git)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
+set -g default-terminal "screen-256color"
 
 unsetopt correct_all
 unsetopt promptcr
-alias tmux="tmux"
-export TERM=xterm-256color
+alias tmux="TERM=screen-256color-bce tmux -u2"
 export EDITOR=vim
 
 PATH=".cabal/bin:"
