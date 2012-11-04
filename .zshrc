@@ -1,8 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 export OH_MY_ZSH_DEBUG="true"
-
-test -f "$HOME/src/hgd/hd" && export OH_MY_ZSH_HG="$HOME/src/hgd/hd" || export OH_MY_ZSH_HG='hg'
+export DISABLE_AUTO_UPDATE="true"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -23,8 +22,10 @@ set -g default-terminal "screen-256color"
 
 unsetopt correct_all
 unsetopt promptcr
+setopt promptsubst
+
 alias tmux="TERM=screen-256color-bce tmux -u2"
-export EDITOR=vim
+export EDITOR='vim'
 
 PATH=".cabal/bin:"
 PATH=$PATH"/bin:"
