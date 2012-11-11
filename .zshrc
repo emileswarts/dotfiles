@@ -18,7 +18,7 @@ plugins=(command-coloring mercurial nyan vi-mode hg git)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-set -g default-terminal "screen-256color"
+set -g default-terminal "xterm-256color"
 
 unsetopt correct_all
 unsetopt promptcr
