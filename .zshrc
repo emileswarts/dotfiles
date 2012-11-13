@@ -18,7 +18,6 @@ plugins=(command-coloring mercurial nyan vi-mode hg git)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-set -g default-terminal "xterm-256color"
 
 unsetopt correct_all
 unsetopt promptcr
@@ -68,3 +67,9 @@ function precmd () {
 }
 
 export LSCOLORS="Bxfxcxdxbxegedabagacad"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+set -g default-terminal "screen-256color"
+export TERM=screen-256color
