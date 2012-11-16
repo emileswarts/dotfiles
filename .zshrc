@@ -27,8 +27,8 @@ alias tmux="TERM=screen-256color-bce tmux -u2"
 export EDITOR='vim'
 
 PATH=".cabal/bin:"
-PATH=$PATH"/bin:"
 PATH=$PATH"/usr/local/bin:"
+PATH=$PATH"/bin:"
 PATH=$PATH"/usr/local:"
 PATH=$PATH"/usr/bin:"
 PATH=$PATH"/usr/local/sbin:"
