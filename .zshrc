@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+export OH_MY_ZSH_DEBUG="true"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -19,8 +20,11 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 unsetopt correct_all
+unsetopt promptcr
+setopt promptsubst
+
+#alias tmux="TERM=screen-256color-bce tmux -u2"
 alias tmux="tmux"
-export TERM=xterm-256color
 export EDITOR=vim
 
 PATH=".cabal/bin:"
@@ -65,3 +69,6 @@ function precmd () {
 	_z --add "$(pwd -P)"
 }
 
+export LSCOLORS="Bxfxcxdxbxegedabagacad"
+set -g default-terminal "screen-256color"
+export TERM=screen-256color
