@@ -1,0 +1,14 @@
+# ~/.tmuxinator/mail.yml
+# you can make as many tabs as you wish...
+
+project_name: Tmuxinator
+project_root: ~/
+tabs:
+  - WORKMAIL:
+      layout: main-vertical
+      panes:
+        - mutt
+        - mutt -R
+        - muttem
+        - muttkp
+        - irssi
