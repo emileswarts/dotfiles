@@ -1,0 +1,17 @@
+# ~/.tmuxinator/myreef.yml
+# you can make as many tabs as you wish...
+
+project_name: Myreef
+project_root: /srv/http/myreef/
+#rvm: 1.9.3@rails_project
+#pre: sudo /etc/rc.d/mysqld start
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - #empty, will just run plain bash
+        - rails c
+  - database: rails db
+  - server: rails s
+  - logs: tail -f log/development.log

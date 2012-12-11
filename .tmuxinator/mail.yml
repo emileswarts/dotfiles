@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: Tmuxinator
-project_root: ~/
+project_root: ~/Desktop
 tabs:
   - WORKMAIL:
       layout: main-vertical
@@ -11,4 +11,3 @@ tabs:
         - mutt -R
         - muttem
         - muttkp
-        - irssi
