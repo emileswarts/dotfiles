@@ -1,5 +1,3 @@
-" set mapleader=","
-
 " use the listed characters to enumerate quickhint elements
 set hintkeys=arstdhneiofu
 
@@ -14,3 +12,16 @@ nmap <C-F2> :set guioptions!=B<CR>
 nmap ee gt
 nmap en gT
 colorscheme cf8
+
+" FASTER PLEASE
+nmap -builtin j 4j
+nmap -builtin k 4k
+
+nmap -builtin <c-f> <f12>
+
+" Shift is hard.
+nmap -builtin ; :
+
+set hlfind
+
+nmap -builtin ,<space> <esc>:noh<CR>
