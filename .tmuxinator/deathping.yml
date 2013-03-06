@@ -1,0 +1,17 @@
+# ~/.tmuxinator/myreef.yml
+# you can make as many tabs as you wish...
+
+project_name: Ping of Death
+project_root: /Users/emileswarts/
+tabs:
+  - editor:
+      layout: tiled
+      panes:
+        - sudo ping -f 127.0.0.1
+        - sudo ping -f 127.0.0.1
+        - sudo ping -f 127.0.0.1
+        - sudo ping -f 127.0.0.1
+        - sudo ping -f 127.0.0.1
+        - sudo ping -f 127.0.0.1
+        - sudo ping -f 127.0.0.1
+        - sudo ping -f 127.0.0.1
