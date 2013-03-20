@@ -1,7 +1,7 @@
-set mapleader=","
+" set mapleader=","
 
 " use the listed characters to enumerate quickhint elements
-set hintkeys=arstdhneio
+set hintkeys=arstdhneiofu
 
 " toggle menu toolbar
 nmap <C-F1> :set guioptions!=m<CR>
@@ -9,7 +9,7 @@ nmap <C-F1> :set guioptions!=m<CR>
 nmap <C-F2> :set guioptions!=B<CR>
 
 " view native size of image without clicking it
-nmap <leader>z :js window.content.document.toggleImageSize();<CR>
+" nmap <leader>z :js window.content.document.toggleImageSize();<CR>
 
 nmap ee gt
 nmap en gT

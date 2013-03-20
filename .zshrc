@@ -2,6 +2,8 @@
 ZSH=$HOME/.oh-my-zsh
 export OH_MY_ZSH_DEBUG="true"
 
+test -f "$HOME/src/hgd/hd" && export OH_MY_ZSH_HG="$HOME/src/hgd/hd" || export OH_MY_ZSH_HG='hg'
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -25,13 +27,14 @@ setopt promptsubst
 
 #alias tmux="TERM=screen-256color-bce tmux -u2"
 alias tmux="tmux"
+export TERM=xterm-256color
 export EDITOR=vim
 
 PATH=".cabal/bin:"
 PATH=$PATH"/bin:"
+PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local:"
 PATH=$PATH"/usr/bin:"
-PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local/sbin:"
 PATH=$PATH"$HOME/pear/bin:"
 PATH=$PATH"/usr/sbin:"
@@ -41,9 +44,10 @@ PATH=$PATH"/opt/vagrant/bin:"
 PATH=$PATH"$HOME/.gem/ruby/1.9.1/bin:"
 PATH=$PATH"/usr/local/mysql/bin:"
 PATH=$PATH"/.rvm/scripts/rvm:"
-PATH=$PATH"$HOME/bin/"
+PATH=$PATH"/usr/local/mongodb/bin"
 
 export PATH
+
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
 #

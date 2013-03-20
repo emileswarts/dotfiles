@@ -1,0 +1,43 @@
+[general]
+ui = TTY.TTYUI
+accounts = EmileSwarts
+pythonfile=~/.mutt/offlineimap.py
+fsync = False
+ssl = yes
+
+[Account EmileSwarts]
+localrepository = EmileSwarts-Local
+remoterepository = EmileSwarts-Remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Repository EmileSwarts-Local]
+type = Maildir
+localfolders = ~/.mail/emile.swarts123@gmail.com
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail',
+                            }.get(folder, folder)
+
+[Repository EmileSwarts-Remote]
+maxconnections = 1
+cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
+type = Gmail
+remoteuser = emile.swarts123@gmail.com
+remotepasseval = get_keychain_pass(account="emile.swarts123@gmail.com", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             'Nagios',
+                                             'Django',
+                                             'Flask',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             ]
