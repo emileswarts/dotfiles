@@ -1,18 +1,3 @@
-alias sshhomer='ssh emile@homer.fatbeehive.com'
-alias sshbrix='ssh emile@brix.fatbeehive.com'
-alias sshfalco='ssh -p 6007 emile@falco.fatbeehive.com'
-alias sshmicko='ssh emile@micko.fatbeehive.com'
-alias sshnearly='ssh korpzone_emileswarts@ssh.phx.nearlyfreespeech.net'
-alias sshnearlyvim='ssh korpzone_myvimcommands@ssh.phx.nearlyfreespeech.net'
-alias sshdev='ssh emile@192.168.1.126'
-
-alias sshfsbrix='sshfs emile@brix.fatbeehive.com:/server/www/ ~/srv/brix/'
-alias sshfshomer='sshfs emile@homer.fatbeehive.com:/server/www/ ~/srv/homer/'
-alias sshfsfalco='sshfs -p 6007 emile@falco.fatbeehive.com:/server/www ~/srv/falco/'
-alias sshfsmicko='sshfs emile@micko.fatbeehive.com:/server/www ~/srv/micko/'
-alias sshfsnearly='sshfs korpzone_emileswarts@ssh.phx.nearlyfreespeech.net:/ ~/srv/nearly/'
-alias sshfsnearlyvim='sshfs korpzone_myvimcommands@ssh.phx.nearlyfreespeech.net:/ ~/srv/nearlyvim/'
-
 alias ubrix='fusermount -z -u ~/srv/brix'
 alias uhomer='fusermount -z -u ~/srv/homer'
 alias ufalco='fusermount -z -u ~/srv/falco'
