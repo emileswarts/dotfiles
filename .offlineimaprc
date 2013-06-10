@@ -3,7 +3,6 @@ ui = TTY.TTYUI
 accounts = EmileSwarts
 pythonfile=~/.mutt/offlineimap.py
 fsync = False
-ssl = yes
 
 [Account EmileSwarts]
 localrepository = EmileSwarts-Local
