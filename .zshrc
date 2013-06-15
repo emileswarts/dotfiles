@@ -15,7 +15,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(command-coloring mercurial nyan vi-mode hg git)
+plugins=(command-coloring git)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
@@ -61,6 +61,8 @@ function history-all { history -E 1 }
 
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+set -o vi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
