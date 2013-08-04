@@ -43,6 +43,7 @@ PATH=$PATH"/.rvm/scripts/rvm:"
 PATH=$PATH"/usr/local/mongodb/bin"
 
 export PATH
+stty -ixon
 
 export GREP_OPTIONS='--color=auto'
 bindkey '^R' history-incremental-search-backward
