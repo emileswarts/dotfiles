@@ -26,20 +26,18 @@ alias tmux="tmux"
 export TERM=xterm-256color
 export EDITOR=vim
 
-PATH=".cabal/bin:"
+PATH=$HOME".rbenv/bin:"
+PATH=$PATH".cabal/bin:"
 PATH=$PATH"/bin:"
 PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local:"
 PATH=$PATH"/usr/bin:"
 PATH=$PATH"/usr/local/sbin:"
-PATH=$PATH"$HOME/pear/bin:"
 PATH=$PATH"/usr/sbin:"
 PATH=$PATH"/sbin:"
 PATH=$PATH"/usr/bin/core_perlkb:"
 PATH=$PATH"/opt/vagrant/bin:"
-PATH=$PATH"$HOME/.gem/ruby/1.9.1/bin:"
 PATH=$PATH"/usr/local/mysql/bin:"
-PATH=$PATH"/.rvm/scripts/rvm:"
 PATH=$PATH"/usr/local/mongodb/bin"
 
 export PATH
@@ -56,20 +54,13 @@ setopt share_history
 function history-all { history -E 1 }
 # xmodmap $HOME/.Xmodmap
 
-# Load RVM, if you are using it
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-# Load RVM, if you are using it
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
 set -o vi
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 . $HOME/bin/z/z.sh
 function precmd () {
 	_z --add "$(pwd -P)"
 }
 
+eval "$(rbenv init -)"
+
 export LSCOLORS="Bxfxcxdxbxegedabagacad"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
