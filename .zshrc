@@ -44,6 +44,7 @@ export PATH
 stty -ixon
 
 export GREP_OPTIONS='--color=auto'
+bindkey -v
 bindkey '^R' history-incremental-search-backward
 #
 # history
