@@ -13,7 +13,7 @@ windows:
           - set -o vi
           - cd /var/www/mole-capture
           - git checkout capture
-          - rackup -p 5001
+          - rackup -p 5002
         - cmd:
           - vagrant ssh
           - set -o vi
@@ -30,7 +30,7 @@ windows:
           - vagrant ssh
           - set -o vi
           - cd /var/www/mole-tracker
-          - bundle exec rackup -p 5002
+          - bundle exec rackup -p 5001
         - cmd:
           - vagrant ssh
           - set -o vi
