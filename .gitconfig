@@ -22,9 +22,13 @@
 	name = Emile
 	email = emile.swarts123@gmail.com
 [github]
-    user = emileswarts
-    token = 09988b3a47a256e113017deceebeb5f1
+  user = emileswarts
+  token = 09988b3a47a256e113017deceebeb5f1
 [merge]
 	tool = vimdiff
 [core]
 	editor = vim
+[alias]
+	gdc = diff --cached
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	oo = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
