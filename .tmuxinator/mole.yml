@@ -1,0 +1,59 @@
+# ~/.tmuxinator/mole.yml
+
+name: mole
+root: ~/vagrant-dev/www
+
+windows:
+  - mole_capture:
+      layout: main-horizontal
+      panes:
+        - cd mole-capture && git checkout capture && vim
+        - server:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole-capture
+          - git checkout capture
+          - rackup -p 5002
+        - cmd:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole-capture
+        - cmd:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole-capture
+  - mole_tracker:
+      layout: main-horizontal
+      panes:
+        - cd mole-tracker && git checkout tracker && vim
+        - server:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole-tracker
+          - bundle exec rackup -p 5001
+        - cmd:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole-tracker
+  - mole:
+      layout: main-horizontal
+      panes:
+        - cd mole && git checkout master && vim
+        - server:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole
+          - bundle exec rails s -p 5000
+        - mysql:
+          - vagrant ssh
+          - set -o vi
+          - mysql -u root -proot marketing_intelligence_dev
+        - cmd:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole
+        - background_job:
+          - vagrant ssh
+          - set -o vi
+          - cd /var/www/mole
+          - bundle exec rake jobs:work
