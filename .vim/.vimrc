@@ -6,7 +6,6 @@
 	call pathogen#helptags()
 "}}}
 "BASIC OPTIONS {{{
-	"set grepprg=ack\ --nogroup\ $*
 	set autoindent
 	set autoread
 	set backspace=indent,eol,start " Intuitive backspacing in insert mode
@@ -300,8 +299,15 @@ inoremap <C-f> <C-x><C-f>
 	augroup ft_sql
 		au!
 		au BufNewFile,BufRead *.sql set filetype=sql
+    iabbrev ssf select * from
+    iabbrev st show tables;
+    iabbrev ii insert into
+    iabbrev de describe
 	augroup END
 " }}}
+" PHP {{{
+  au FileType php setlocal shiftwidth=4
+  au FileType php setlocal smarttab
 " RUBY {{{
 	augroup ft_ruby
 			set tabstop=2
@@ -344,4 +350,4 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 	let g:Powerline_symbols = 'fancy'
 	"}}}
 
-let g:dbext_default_profile_mysql_local = 'type=MYSQL:host=localhost:port=5000:user=root:passwd=root:dbname=marketing_intelligence_dev:extra=-t'
+let g:dbext_default_profile_mysql_local = 'type=MYSQL:host=193.168.0.93:port=3306:user=root:passwd=root:dbname=onrunning_dev:extra=-t'
