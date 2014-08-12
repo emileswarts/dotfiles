@@ -25,9 +25,10 @@ unsetopt promptcr
 alias tmux="tmux"
 export TERM=screen-256color
 export EDITOR=vim
+export KEYTIMEOUT=1
 
-PATH=$HOME".rbenv/bin:"
-PATH=$PATH".cabal/bin:"
+PATH=$HOME"/.rbenv/bin:"
+PATH=$PATH"/.cabal/bin:"
 PATH=$PATH"/bin:"
 PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local:"
