@@ -63,6 +63,8 @@
 	set backupskip=/tmp/*,/private/tmp/*" " Crontab files need this below
 	set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 
+  " Don't try to highlight lines longer than 800 characters.
+  set synmaxcol=800
 
 	if has("autocmd")
 		autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
@@ -92,7 +94,8 @@
   let g:CommandTMaxHeight = 20
 
   let g:CommandTCancelMap=['<ESC>', '<C-c>']
-  let g:CommandTHighlightColor="Pmenu"
+  let g:CommandTHighlightColor="ShowMarksHLm"
+  let g:CommandTBackgroundColor="Identifier"
   let g:CommandTBackspaceMap='<C-h>'
   let g:CommandTCursorLeftMap='<left>'
 "}}}
@@ -132,6 +135,9 @@ syntax on
 
 	"Make D act normally
 	nmap D d$
+
+  " Keep the cursor in place while joining lines
+  nnoremap J mzJ`z
 
 	nnoremap S i<CR><esc><right>
 
@@ -190,6 +196,10 @@ inoremap <C-f> <C-x><C-f>
 	" A {{{
   nnoremap ,a <C-^>
 	"}}}
+	" C {{{
+    nmap <leader>c <Plug>CommentaryLine
+    xmap <leader>c <Plug>Commentary
+	"}}}
 " D {{{
   nnoremap <leader>d :vsp<cr>
 "}}}
@@ -215,8 +225,8 @@ inoremap <C-f> <C-x><C-f>
 "}}}
 " P {{{
 	"paste from system clipboard
-	nnoremap <leader>p "+p
-	vnoremap <leader>p "+p
+	nnoremap <leader>p "*p
+	vnoremap <leader>p "*p
 "}}}
 " Q {{{
 	"quit
@@ -230,23 +240,36 @@ inoremap <C-f> <C-x><C-f>
 	nnoremap <leader>ss :set spell!<cr>
 "}}}
 " T {{{
+
 	nnoremap <leader>m :CommandT<cr>
-	nnoremap <leader>ta :CommandT app<cr>
-	nnoremap <leader>tv :CommandT app/views<cr>
-	nnoremap <leader>tc :CommandT app/controllers<cr>
-	nnoremap <leader>tm :CommandT app/models<cr>
+	nnoremap <leader>ts :CommandT src<cr>
 
-	nnoremap <leader>tk :CommandT config/<cr>
+	nnoremap <leader>tff :CommandT specs/features/cms<cr>
+	nnoremap <leader>tfs :CommandT specs/steps/CMS<cr>
+
 	nnoremap <leader>td :CommandT db<cr>
-	nnoremap <leader>tg :vsp Gemfile<cr>
-	nnoremap <leader>tl :CommandT lib<cr>
-	nnoremap <leader>tr :vsp config/routes.rb<cr>
+	nnoremap <leader>tw :CommandT web<cr>
 
-	nnoremap <leader>tf :CommandT features<cr>
-	nnoremap <leader>te :CommandT features/factories<cr>
-	nnoremap <leader>tu :CommandT features/support<cr>
+	nnoremap <leader>tc :CommandT config<cr>
+  let g:CommandTWildIgnore=&wildignore . ",**/logs/*,**/*.sql,**/assets/fonts/*,**/vendor/*,**/app/*,**/images/*,**/lib/*,**/node_modules/*,**/reports/*,**/shop/*"
 
-	nnoremap <leader>ts :CommandT spec<cr>
+	" nnoremap <leader>m :CommandT<cr>
+	" nnoremap <leader>ta :CommandT app<cr>
+	" nnoremap <leader>tv :CommandT app/views<cr>
+	" nnoremap <leader>tc :CommandT app/controllers<cr>
+	" nnoremap <leader>tm :CommandT app/models<cr>
+
+	" nnoremap <leader>tk :CommandT config/<cr>
+	" nnoremap <leader>td :CommandT db<cr>
+	" nnoremap <leader>tg :vsp Gemfile<cr>
+	" nnoremap <leader>tl :CommandT lib<cr>
+	" nnoremap <leader>tr :vsp config/routes.rb<cr>
+
+	" nnoremap <leader>tf :CommandT features<cr>
+	" nnoremap <leader>te :CommandT features/factories<cr>
+	" nnoremap <leader>tu :CommandT features/support<cr>
+
+	" nnoremap <leader>ts :CommandT spec<cr>
 "}}}
 " U {{{
 	nnoremap <leader>u :Ag
@@ -269,7 +292,7 @@ inoremap <C-f> <C-x><C-f>
   autocmd FileType ruby vmap <buffer> <leader>x ma:set nocursorline nocursorcolumn<CR><Plug>(xmpfilter-run)'a
 "}}}
 " Y {{{
-	vnoremap <leader>y "+y
+	vnoremap <leader>y "*y
 "}}}
 " Z {{{
 	nnoremap <leader>z :set cursorline! cursorcolumn!<CR>
@@ -303,6 +326,7 @@ inoremap <C-f> <C-x><C-f>
     iabbrev st show tables;
     iabbrev ii insert into
     iabbrev de describe
+    nnoremap <c-e> :DBExecSQL<cr>
 	augroup END
 " }}}
 " PHP {{{
@@ -336,6 +360,7 @@ inoremap <C-f> <C-x><C-f>
   iabbrev waht what
   iabbrev tehn then
   iabbrev teh the
+  iabbrev sfdb \Doctrine\Common\Util\Debug::dump();
 "}}}
 " FUNCTIONS {{{
 " Removes trailing spaces
@@ -351,3 +376,15 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 	"}}}
 
 let g:dbext_default_profile_mysql_local = 'type=MYSQL:host=193.168.0.93:port=3306:user=root:passwd=root:dbname=onrunning_dev:extra=-t'
+
+" Typos
+command! -bang E e<bang>
+command! -bang Q q<bang>
+command! -bang W w<bang>
+command! -bang QA qa<bang>
+command! -bang Qa qa<bang>
+command! -bang Wa wa<bang>
+command! -bang WA wa<bang>
+command! -bang Wq wq<bang>
+command! -bang WQ wq<bang>
+
