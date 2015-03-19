@@ -32,5 +32,7 @@
 [alias]
 	gdc = diff --cached
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  in = log ..@{u}
+  out = log @{u}..
 [pull]
 	rebase = true
