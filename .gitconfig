@@ -27,12 +27,17 @@
 [merge]
 	tool = vimdiff
 [core]
-	editor = vim
+	editor = /usr/local/bin/nvim
 	ignorecase = false
 [alias]
-	gdc = diff --cached
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	gdc = diff --cached
   in = log ..@{u}
   out = log @{u}..
+  po = log @{u}..
 [pull]
 	rebase = true
+[init]
+	templatedir = ~/.git_template
+[push]
+	default = upstream

@@ -28,9 +28,11 @@ export EDITOR=vim
 export KEYTIMEOUT=1
 export DISABLE_AUTO_UPDATE=true
 
+GRADLE_HOME=$HOME"/Downloads/gradle-3.0"
 PATH=$HOME"/.rbenv/bin:"
 PATH=$PATH"/.cabal/bin:"
 PATH=$PATH"/bin:"
+PATH=$PATH"/usr/local/php5/bin:"
 PATH=$PATH"/usr/local/bin:"
 PATH=$PATH"/usr/local:"
 PATH=$PATH"/usr/bin:"
@@ -40,7 +42,20 @@ PATH=$PATH"/sbin:"
 PATH=$PATH"/usr/bin/core_perlkb:"
 PATH=$PATH"/opt/vagrant/bin:"
 PATH=$PATH"/usr/local/mysql/bin:"
-PATH=$PATH"/usr/local/mongodb/bin"
+PATH=$PATH"/usr/local/mongodb/bin:"
+PATH=$PATH"/usr/local/bin:"
+PATH=$PATH"${HOME}/bin/apache-maven-3.3.9/bin:"
+PATH=$PATH"${HOME}/Downloads/gradle-1.12/bin:"
+PATH=$PATH"/usr/local/go/bin:"
+PATH=$PATH"${HOME}/.cargo/bin"
+
+
+export M2_HOME="/Users/korpz/bin/apache-maven-3.3.9"
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+export M2=$M2_HOME"/bin"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
+
+# export CLASSPATH=""
 
 export PATH
 stty -ixon
@@ -73,3 +88,10 @@ export LSCOLORS="Bxfxcxdxbxegedabagacad"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
+export NVM_DIR="/Users/korpz/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+bindkey -M vicmd 'e' up-history
+bindkey -M vicmd 'n' down-history

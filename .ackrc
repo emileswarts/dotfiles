@@ -1,1 +1,7 @@
 --ignore-dir=.hg
+--ignore-dir=.app-cache
+--ignore-dir=.bp-config
+--ignore-dir=.sass-cache
+--ignore-dir=db/seed
+--ignore-dir=assets/dist
+--ignore-dir=log
