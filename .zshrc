@@ -90,8 +90,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
-export NVM_DIR="/Users/korpz/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 bindkey -M vicmd 'e' up-history
 bindkey -M vicmd 'n' down-history
+
+GPG_TTY=$(tty)
+export GPG_TTY
+

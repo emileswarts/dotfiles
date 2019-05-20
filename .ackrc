@@ -5,3 +5,4 @@
 --ignore-dir=db/seed
 --ignore-dir=assets/dist
 --ignore-dir=log
+--ignore-dir=log
