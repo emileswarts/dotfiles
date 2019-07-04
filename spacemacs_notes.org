@@ -1,0 +1,67 @@
+* Space
+** keybindings
+*** *
+search word under cursor in buffer
+*** /
+search word under cursor
+*** 0-9
+jump to window
+*** :
+:
+m-x
+*** fs
+save file
+*** fm{
+    change do block style
+*** f
+    R => rename current file
+    ar => ranger!
+    ft => tree!
+    start + e => find replace in buffer?
+    ? => find replace in project?
+*** t
+w => toggle invisible chars
+
+*** p
+b => buffers in project
+** ranger
+;+ => create directory
+q  => quit
+
+https://gist.github.com/adham90/0d85d023f9d4f1dd28ef
+
+** custom
+feg => open govwifi cheatsheet
+fen => open notes
+** Org Mode
+use stars!
+** Magit
+*** g
+**** l
+     l => log
+**** r
+    refresh
+**** s
+     bb => checkout branch
+     bc => Check out a new branch
+     dr master => git diff master
+     ds master => git diff master
+     Fu => pull
+**** M
+     Git blame popup
+** Shell
+   '
+** TODO
+   Reload file?
+   Tabwidth in ruby?
+   Macros? nooooooo
+   Tab instead of %
+   See last log message
+   Git popup thingy
+   Get .spacemacs under version control
+   Get spacemacs_notes.org under version control
+   Copy paste images easily
+   Git Blame inline?
+   No syntax highlighting ranger
+   How to rebase with magit
+   Don't leave magit buffers hanging around
