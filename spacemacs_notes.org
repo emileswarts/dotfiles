@@ -63,5 +63,5 @@ use stars!
    Copy paste images easily
    Git Blame inline?
    No syntax highlighting ranger => DONE
-   How to rebase with magit
+   How to rebase with magit => DONE
    Don't leave magit buffers hanging around
