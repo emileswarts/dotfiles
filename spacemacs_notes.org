@@ -24,6 +24,9 @@ w => toggle invisible chars
 
 *** p
 b => buffers in project
+*** x
+**** w d
+Google translate
 ** ranger
 ;+ => create directory
 q  => quit
@@ -57,10 +60,9 @@ use stars!
    Macros? nooooooo => SEEMS FINE?
    Tab instead of %
    See last log message
-   Git popup thingy
-   Get .spacemacs under version control
-   Get spacemacs_notes.org under version control
-   Copy paste images easily
+   Git blame
+   Get .spacemacs under version control => DONE
+   Get spacemacs_notes.org under version control => DONE
    Git Blame inline?
    No syntax highlighting ranger => DONE
    How to rebase with magit => DONE
