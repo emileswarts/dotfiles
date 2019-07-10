@@ -52,9 +52,9 @@ use stars!
 ** Shell
    '
 ** TODO
-   Reload file?
+   Reload file? => DONE, Free
    Tabwidth in ruby?
-   Macros? nooooooo
+   Macros? nooooooo => SEEMS FINE?
    Tab instead of %
    See last log message
    Git popup thingy
@@ -62,6 +62,6 @@ use stars!
    Get spacemacs_notes.org under version control
    Copy paste images easily
    Git Blame inline?
-   No syntax highlighting ranger
+   No syntax highlighting ranger => DONE
    How to rebase with magit
    Don't leave magit buffers hanging around
