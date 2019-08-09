@@ -56,7 +56,7 @@ use stars!
    '
 ** TODO
    Reload file? => DONE, Free
-   Tabwidth in ruby?
+   Tabwidth in ruby? => DONE
    Macros? nooooooo => SEEMS FINE?
    Tab instead of %
    See last log message
