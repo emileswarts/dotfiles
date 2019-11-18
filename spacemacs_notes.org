@@ -52,18 +52,32 @@ use stars!
      Fu => pull
 **** M
      Git blame popup
+**** h
+     o View file in Github
 ** Shell
    '
 ** TODO
-   Reload file? => DONE, Free
-   Tabwidth in ruby? => DONE
-   Macros? nooooooo => SEEMS FINE?
    Tab instead of %
    See last log message
    Git blame
+   Current file path
+   Git Blame inline?
+   Don't leave magit buffers hanging around
+   Intercative rename all instances
+   Git pull
+   Rename in Ranger, keep filename
+   .DS_Store in terminal urg (ranger using something weird?)
+   Renaming current file doesn't show current name.
+   Disable rainbow parentheses for performance
+   damn tmux copy
+   damn tmux colours
+   audio bell can get fucked
+   Reload file? => DONE, Free
+   Tabwidth in ruby? => DONE
    Get .spacemacs under version control => DONE
    Get spacemacs_notes.org under version control => DONE
-   Git Blame inline?
    No syntax highlighting ranger => DONE
    How to rebase with magit => DONE
-   Don't leave magit buffers hanging around
+
+** DONE
+   Macros

@@ -27,7 +27,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
 
-alias emacs='/usr/local/bin/emacs'
+alias emacs='/usr/local/bin/emacs -nw'
 
 #cd
 alias ..='../'

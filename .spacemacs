@@ -4,37 +4,31 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
-     go
-     sql
+     html
+     yaml
+     ruby
      (auto-completion
          :variables
          auto-completion-tab-key-behavior 'cycle)
-     better-defaults
-     docker
-     clojure
-     emacs-lisp
-     git
      github
-     gtags
-     html
+     git
      helm
      ibuffer
      javascript
      ;(keyboard-layout :variables kl-layout 'qwerty)
-     spacemacs-language
+     ;; spacemacs-language
      markdown
-     spell-checking
      (ruby :variables ruby-version-manager 'rbenv
                       ruby-enable-enh-ruby-mode t)
-     colors
      ranger
+     osx
      terraform
-     ruby-on-rails
-     (shell :variables shell-default-shell 'eshell)
+     ;; ruby-on-rails
+     ;; (shell :variables shell-default-shell 'eshell)
      spell-checking
-     semantic
+     ;; semantic
      version-control
-     yaml)
+     )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
@@ -108,19 +102,13 @@
    dotspacemacs-whitespace-cleanup 'trailing
    ))
 
-;; (defun kl/post-config-ranger ()
-;;   "home row"
-;;   (kl/set-in-state ranger-mode-map (kbd "n") 'ranger-next-file)
-;;   (kl/set-in-state ranger-mode-map (kbd "e") 'ranger-prev-file)
-;;   (kl/set-in-state ranger-mode-map (kbd "i") 'ranger-find-file)
-;;   (kl/set-in-state ranger-mode-map (kbd "l") 'ranger-preview-toggle))
-
 (defun dotspacemacs/user-init ()
   (setq-default
     ranger-show-hidden t
     ranger-show-preview t
-    ranger-cleanup-eagerly t
-    ranger-show-literal nil
+    ;; ranger-cleanup-eagerly t
+    ;; ranger-show-literal nil
+    ;; ranger-cleanup-on-disable t
     evil-shift-round nil
     indent-tabs-mode nil
     require-final-newline t
@@ -131,7 +119,14 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (evil-leader/set-key
+  (add-hook 'enh-ruby-mode-hook (lambda () (rainbow-delimiters-mode -1)) t)
+  ;; (use-package osx-clipboard
+  ;;   :config
+  ;;   (progn
+  ;;     (osx-clipboard-mode +1)
+  ;;     (diminish 'osx-clipboard-mode)))
+
+    (evil-leader/set-key
     "fef" '(lambda () (interactive) (find-file "~/formbuilder_cheatsheet.org"))
     "feg" '(lambda () (interactive) (find-file "~/gov_cheatsheet"))
     "fes" '(lambda () (interactive) (find-file "~/spacemacs_notes.org"))
@@ -154,15 +149,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(evil-want-Y-yank-to-eol t)
  '(package-selected-packages
    (quote
-    (pcre2el parent-mode flx highlight undo-tree s spinner pkg-info epl bind-map bind-key packed popup enh-ruby-mode inf-ruby go-guru go-eldoc company-go go-mode zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme exotica-theme espresso-theme dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme rainbow-mode rainbow-identifiers color-identifiers-mode floobits ibuffer-projectile clojure-snippets clj-refactor edn paredit peg cider-eval-sexp-fu cider sesman queue parseedn clojure-mode parseclj a dockerfile-mode docker tablist docker-tramp omnisharp csharp-mode magit-gh-pulls github-search github-clone github-browse-file gist gh marshal logito pcache ht typit mmt sudoku pacmacs 2048-game sql-indent noflet ensime sbt-mode scala-mode ranger terraform-mode hcl-mode powerline hydra lv avy anzu iedit smartparens evil goto-chg helm helm-core async projectile f dash yaml-mode xterm-color web-mode web-beautify unfill tagedit stickyfunc-enhance srefactor smeargle slim-mode shell-pop scss-mode sass-mode pug-mode projectile-rails inflections orgit mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow magit-popup livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc helm-gtags helm-gitignore helm-css-scss helm-company helm-c-yasnippet haml-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md ggtags fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck feature-mode evil-magit magit transient git-commit with-editor eshell-z eshell-prompt-extras esh-help emmet-mode diff-hl company-web web-completion-data company-tern dash-functional tern company-statistics company coffee-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete monokai-theme ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline rvm ruby-tools ruby-test-mode rubocop rspec-mode robe restart-emacs request rbenv rake rainbow-delimiters popwin persp-mode paradox org-plus-contrib org-bullets open-junk-file neotree move-text minitest macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode chruby bundler auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (bind-key dash-functional hydra f phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode evil company lv yasnippet with-editor smartparens highlight request helm helm-core projectile avy ht org-plus-contrib magit transient git-commit async inf-ruby simple-httpd dash macrostep elisp-slime-nav define-word auto-compile packed yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org terraform-mode tagedit spaceline smeargle slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv ranger rake rainbow-delimiters pug-mode popwin persp-mode pbcopy paradox osx-trash osx-dictionary orgit org-bullets open-junk-file neotree move-text monokai-theme mmm-mode minitest markdown-toc magit-gitflow magit-gh-pulls lorem-ipsum livid-mode linum-relative link-hint launchctl json-mode js2-refactor js-doc indent-guide ibuffer-projectile hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flyspell-correct-helm flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu enh-ruby-mode emmet-mode dumb-jump diminish diff-hl company-web company-tern company-statistics column-enforce-mode coffee-mode clean-aindent-mode chruby bundler auto-yasnippet auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((((class color) (min-colors 257)) (:foreground "#F8F8F2" :background "#272822")) (((class color) (min-colors 89)) (:foreground "#F5F5F5" :background "#1B1E1C")))))
+ )
