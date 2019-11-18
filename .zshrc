@@ -26,7 +26,7 @@ alias tmux="tmux"
 export TERM=screen-256color
 export EDITOR=vim
 export KEYTIMEOUT=1
-export DISABLE_AUTO_UPDATE=true
+DISABLE_AUTO_UPDATE=true
 
 GRADLE_HOME=$HOME"/Downloads/gradle-3.0"
 PATH=$HOME"/.rbenv/bin:"
