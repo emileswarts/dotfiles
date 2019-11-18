@@ -9,8 +9,11 @@ jump to window
 *** :
 :
 m-x
-*** fs
-save file
+*** f
+**** s
+     Save file
+**** y
+     Show file path
 *** fm{
     change do block style
 *** f
@@ -51,17 +54,13 @@ use stars!
      ds master => git diff master
      Fu => pull
 **** M
-     Git blame popup
+     Git blame popup (s) to show
 **** h
      o View file in Github
 ** Shell
    '
 ** TODO
    Tab instead of %
-   See last log message
-   Git blame
-   Current file path
-   Git Blame inline?
    Don't leave magit buffers hanging around
    Intercative rename all instances
    Git pull
@@ -72,12 +71,16 @@ use stars!
    damn tmux copy
    damn tmux colours
    audio bell can get fucked
+   See last log message
    Reload file? => DONE, Free
    Tabwidth in ruby? => DONE
    Get .spacemacs under version control => DONE
    Get spacemacs_notes.org under version control => DONE
    No syntax highlighting ranger => DONE
    How to rebase with magit => DONE
+   Git blame => DONE
+   Current file path => DONE
+   damn tmux auto update => DONE
 
 ** DONE
    Macros

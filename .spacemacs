@@ -15,18 +15,13 @@
      helm
      ibuffer
      javascript
-     ;(keyboard-layout :variables kl-layout 'qwerty)
-     ;; spacemacs-language
      markdown
      (ruby :variables ruby-version-manager 'rbenv
                       ruby-enable-enh-ruby-mode t)
      ranger
      osx
      terraform
-     ;; ruby-on-rails
-     ;; (shell :variables shell-default-shell 'eshell)
      spell-checking
-     ;; semantic
      version-control
      )
    dotspacemacs-additional-packages '()
