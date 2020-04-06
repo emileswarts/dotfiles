@@ -35,6 +35,8 @@ PATH=$PATH"/usr/bin:"
 PATH=$PATH"/usr/local/sbin:"
 PATH=$PATH"/usr/sbin:"
 PATH=$PATH"/sbin:"
+PATH=$PATH"~/bin:"
+PATH=$PATH"/Users/korpzilla/bin:"
 
 export PATH
 stty -ixon
@@ -68,3 +70,6 @@ bindkey -M vicmd 'n' down-history
 
 GPG_TTY=$(tty)
 export GPG_TTY
+export PY_USER_BIN=/Users/korpzilla/Library/Python/2.7/bin
+export PATH=$PY_USER_BIN:$PATH
+export AWS_REGION=eu-west-1

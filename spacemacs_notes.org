@@ -60,8 +60,10 @@ use stars!
 ** Shell
    '
 ** TODO
-   Tab instead of %
-   Don't leave magit buffers hanging around
+   Git checkout
+   Indicate mode ZSH
+   Github pulls error message
+   Numbering is all weird
    Intercative rename all instances
    Git pull
    Rename in Ranger, keep filename
@@ -72,6 +74,7 @@ use stars!
    damn tmux colours
    audio bell can get fucked
    See last log message
+   Don't leave magit buffers hanging around
    Reload file? => DONE, Free
    Tabwidth in ruby? => DONE
    Get .spacemacs under version control => DONE
@@ -81,6 +84,7 @@ use stars!
    Git blame => DONE
    Current file path => DONE
    damn tmux auto update => DONE
+   Tab instead of % => DONE
 
 ** DONE
    Macros

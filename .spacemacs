@@ -7,6 +7,7 @@
      python
      html
      yaml
+     java
      ruby
      (auto-completion
          :variables
@@ -25,8 +26,13 @@
      spell-checking
      version-control
      )
-   dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-additional-packages '(
+                                      magit-gh-pulls
+                                      magit-popup
+                                      )
+   dotspacemacs-excluded-packages '(
+                                    smartparens
+                                    )
    dotspacemacs-delete-orphan-packages t))
 
 (defun dotspacemacs/init ()
@@ -91,7 +97,7 @@
    smooth-scroll-lines-from-window-bottom 0
    dotspacemacs-line-numbers t
    dotspacemacs-smartparens-strict-mode nil
-   dotspacemacs-highlight-delimiters 'all
+   dotspacemacs-highlight-delimiters nil
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
@@ -107,6 +113,7 @@
     ;; ranger-cleanup-on-disable t
     evil-shift-round nil
     indent-tabs-mode nil
+    dotspacemacs-highlight-delimiters nil
     require-final-newline t
     ring-bell-function 'ignore
     vc-follow-symlinks t
@@ -115,12 +122,19 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (define-key evil-normal-state-map (kbd "TAB") 'evilmi-jump-items)
+  ;; (define-key evil-normal-state-map (kbd "TAB") 'evilmi-jump-items)
+  ;; (org-defkey org-mode-map [(kbd "TAB")] 'org-cycle)
 
+
+  (unless window-system
+    (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+    (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
   (add-hook 'enh-ruby-mode-hook (lambda () (rainbow-delimiters-mode -1)) t)
     (evil-leader/set-key
+    "fec" '(lambda () (interactive) (find-file "~/cjse.org"))
     "fef" '(lambda () (interactive) (find-file "~/formbuilder_cheatsheet.org"))
     "feg" '(lambda () (interactive) (find-file "~/gov_cheatsheet"))
+    "fem" '(lambda () (interactive) (find-file "~/moj.org"))
     "fes" '(lambda () (interactive) (find-file "~/spacemacs_notes.org"))
     "fen" '(lambda () (interactive) (find-file "~/notes"))
   )
@@ -143,7 +157,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic bind-key dash-functional hydra f phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode evil company lv yasnippet with-editor smartparens highlight request helm helm-core projectile avy ht org-plus-contrib magit transient git-commit async inf-ruby simple-httpd dash macrostep elisp-slime-nav define-word auto-compile packed yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org terraform-mode tagedit spaceline smeargle slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv ranger rake rainbow-delimiters pug-mode popwin persp-mode pbcopy paradox osx-trash osx-dictionary orgit org-bullets open-junk-file neotree move-text monokai-theme mmm-mode minitest markdown-toc magit-gitflow magit-gh-pulls lorem-ipsum livid-mode linum-relative link-hint launchctl json-mode js2-refactor js-doc indent-guide ibuffer-projectile hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flyspell-correct-helm flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu enh-ruby-mode emmet-mode dumb-jump diminish diff-hl company-web company-tern company-statistics column-enforce-mode coffee-mode clean-aindent-mode chruby bundler auto-yasnippet auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (sql-indent company-emacs-eclim eclim csv-mode flx yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic bind-key dash-functional hydra f phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode evil company lv yasnippet with-editor smartparens highlight request helm helm-core projectile avy ht org-plus-contrib magit transient git-commit async inf-ruby simple-httpd dash macrostep elisp-slime-nav define-word auto-compile packed yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org terraform-mode tagedit spaceline smeargle slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv ranger rake rainbow-delimiters pug-mode popwin persp-mode pbcopy paradox osx-trash osx-dictionary orgit org-bullets open-junk-file neotree move-text monokai-theme mmm-mode minitest markdown-toc magit-gitflow magit-gh-pulls lorem-ipsum livid-mode linum-relative link-hint launchctl json-mode js2-refactor js-doc indent-guide ibuffer-projectile hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md fuzzy flyspell-correct-helm flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu enh-ruby-mode emmet-mode dumb-jump diminish diff-hl company-web company-tern company-statistics column-enforce-mode coffee-mode clean-aindent-mode chruby bundler auto-yasnippet auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
